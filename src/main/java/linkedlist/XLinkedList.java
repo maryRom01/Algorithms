@@ -183,8 +183,7 @@ public class XLinkedList {
         head = null;
         while (curr.next != null) {
             prepend(curr.value);
-            Node nextElem = curr.next;
-            curr = nextElem;
+            curr = curr.next;
         }
         prepend(curr.value);
     }
