@@ -3,7 +3,7 @@ package src.main.java.linkedlist;
 public class LLApp {
     public static void main(String[] args) {
         XLinkedList ll = new XLinkedList();
-        System.out.println(ll);
+
         ll.prepend(10);
         ll.prepend(7);
         ll.prepend(5);
@@ -24,8 +24,10 @@ public class LLApp {
 //        ll.insertSorted(100);
 //        System.out.println(ll); // [0] -> [1] -> [3] -> [4] -> [5] -> [6] -> [9] -> [10] -> [100]
 
-        System.out.println(ll.reverse());
-        System.out.println(ll);
+//        System.out.println(ll.reverse());
+//        System.out.println(ll);
 
+        ll.reverseR();
+        System.out.println(ll);
     }
 }

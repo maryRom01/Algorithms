@@ -157,8 +157,21 @@ public class XLinkedList {
         return false;
     }
 
-    public void reverseR() {
+    public Node reverseR(Node curr) {
+        curr = curr.next;
+        Node newListNode = new Node(curr.value);
+        prepend(newListNode.value);
+        return curr;
+    }
 
+    public void reverseR() {
+        Node curr = head;
+        head = null;
+        Node newListNode = new Node(curr.value);
+        prepend(newListNode.value);
+        while (curr.next != null) {
+            curr = reverseR(curr);
+        }
     }
 
     /** new Node is prohibited */
