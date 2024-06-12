@@ -27,7 +27,10 @@ public class LLApp {
 //        System.out.println(ll.reverse());
 //        System.out.println(ll);
 
-        ll.reverseR();
+//        ll.reverseR();
+//        System.out.println(ll);
+
+        ll.reverseR2();
         System.out.println(ll);
     }
 }

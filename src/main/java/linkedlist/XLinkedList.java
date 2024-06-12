@@ -145,6 +145,7 @@ public class XLinkedList {
     }
 
     public boolean reverse() {
+        System.out.println("reverse");
         Node curr = head;
         head = null;
         Node newListNode = new Node(curr.value);
@@ -165,6 +166,7 @@ public class XLinkedList {
     }
 
     public void reverseR() {
+        System.out.println("reverseR");
         Node curr = head;
         head = null;
         Node newListNode = new Node(curr.value);
@@ -176,7 +178,15 @@ public class XLinkedList {
 
     /** new Node is prohibited */
     public void reverseR2() {
-
+        System.out.println("reverseR2");
+        Node curr = head;
+        head = null;
+        while (curr.next != null) {
+            prepend(curr.value);
+            Node nextElem = curr.next;
+            curr = nextElem;
+        }
+        prepend(curr.value);
     }
 
     @Override
