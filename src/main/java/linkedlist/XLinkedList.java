@@ -188,6 +188,21 @@ public class XLinkedList {
         prepend(curr.value);
     }
 
+    public void reverseR3() {
+        System.out.println("reverseR3");
+        Node curr = head;
+        head = null;
+        while (curr.next != null) {
+            curr = reverseR3(curr);
+        }
+        prepend(curr.value);
+    }
+
+    public Node reverseR3(Node curr) {
+        prepend(curr.value);
+        return curr.next;
+    }
+
     @Override
     public String toString() {
         if (head == null) return "LL: empty";
