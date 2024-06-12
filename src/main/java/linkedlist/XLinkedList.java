@@ -147,13 +147,13 @@ public class XLinkedList {
     public boolean reverse() {
         Node curr = head;
         head = null;
-        while (curr.next != null) {
-            Node newListNode = new Node(curr.value);
-            curr = curr.next;
-            prepend(newListNode.value);
-        }
         Node newListNode = new Node(curr.value);
         prepend(newListNode.value);
+        while (curr.next != null) {
+            curr = curr.next;
+            newListNode = new Node(curr.value);
+            prepend(newListNode.value);
+        }
         return false;
     }
 
