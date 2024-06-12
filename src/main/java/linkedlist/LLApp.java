@@ -58,5 +58,9 @@ public class LLApp {
         ll = getRandomArray();
         ll.reverseR2();
         printList(ll);
+
+        ll = getRandomArray();
+        ll.reverseR3();
+        printList(ll);
     }
 }
